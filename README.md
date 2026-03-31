@@ -3,7 +3,7 @@
 ## 🔍 Problem Statement
 
 Customer churn is a critical business problem impacting revenue and growth.
-This project aims to identify high-risk customers and uncover key drivers of churn to enable proactive retention strategies.
+This project focuses on identifying high-risk customers and uncovering key drivers of churn to enable proactive retention strategies.
 
 ---
 
@@ -11,7 +11,7 @@ This project aims to identify high-risk customers and uncover key drivers of chu
 
 * Predict customer churn using machine learning
 * Identify high-risk customer segments
-* Quantify revenue at risk
+* Quantify potential revenue at risk
 * Provide actionable retention strategies
 
 ---
@@ -46,7 +46,7 @@ Performed EDA using SQL to analyze churn patterns across:
 **Key Findings:**
 
 * Customers with **month-to-month contracts** have significantly higher churn
-* **Low tenure + high monthly charges** segment shows highest churn risk
+* **Low tenure + high monthly charges** segment shows the highest churn risk
 * Lack of **value-added services (Tech Support, Online Security)** increases churn probability
 
 ---
@@ -63,7 +63,7 @@ Performed EDA using SQL to analyze churn patterns across:
 
 **Models implemented:**
 
-* Logistic Regression (baseline)
+* Logistic Regression (baseline, class-balanced, threshold-tuned)
 * Random Forest
 * XGBoost
 
@@ -73,19 +73,26 @@ Performed EDA using SQL to analyze churn patterns across:
 * Precision / Recall
 * ROC-AUC
 
-**Model Performance (Final Model):**
+**Final Model:** Logistic Regression with threshold = **0.25**
 
-* ROC-AUC: ~0.84 *(update with actual value)*
-* Recall (Churn class): ~0.78 *(update with actual value)*
-* Precision: ~0.65 *(update with actual value)*
+**Model Performance:**
+
+* ROC-AUC: ~0.84
+* Recall (Churn class): **~0.81**
+* Precision: **~0.50**
+* Accuracy: **~0.73**
 
 ---
 
 ### 5. Threshold Optimization
 
 * Tuned classification threshold to balance precision and recall
-* Prioritized **higher recall** to maximize churn detection
-* Reduced false negatives to ensure high-risk customers are not missed
+* Lowered threshold to **0.25** to prioritize churn detection
+* Recall improved significantly (~0.57 → ~0.81), enabling better identification of at-risk customers
+* Precision decreased (~0.66 → ~0.50), increasing false positives
+* Accuracy reduced (~81% → ~73%), reflecting the trade-off
+
+👉 Focus shifted from accuracy to **maximizing recall**, aligning with business objectives
 
 ---
 
@@ -127,6 +134,8 @@ Performed EDA using SQL to analyze churn patterns across:
 
 * High-risk customers contribute **~30% of total revenue at risk (~$139K monthly)**
 
+* Model captures **~81% of churners**, significantly reducing missed revenue-risk customers
+
 ---
 
 ## 💡 Business Recommendations
@@ -141,7 +150,7 @@ Performed EDA using SQL to analyze churn patterns across:
 ## 📂 Repository Structure
 
 * `sql/` → SQL-based EDA
-* `notebook/` → Python modeling
+* `notebooks/` → Python modeling
 * `dashboard/` → Power BI dashboard
 * `outputs/` → Visualizations and figures
 
@@ -153,7 +162,7 @@ Performed EDA using SQL to analyze churn patterns across:
 git clone https://github.com/rk-analytics/customer-churn-prediction.git
 cd customer-churn-prediction
 pip install -r requirements.txt
-jupyter notebook notebook/churn_modeling.ipynb
+jupyter notebook notebooks/churn_modeling.ipynb
 ```
 
 ---
@@ -163,7 +172,7 @@ jupyter notebook notebook/churn_modeling.ipynb
 * Excel (initial data validation and cleaning)
 * Python 3.10+ (pandas, numpy, scikit-learn, xgboost)
 * SQL (data querying and EDA)
-* Power BI (dashboard)
+* Power BI (dashboarding)
 
 ---
 
