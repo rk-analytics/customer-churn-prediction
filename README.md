@@ -141,8 +141,9 @@ Performed EDA using SQL to analyze churn patterns across:
 ## 📂 Repository Structure
 
 * `sql/` → SQL-based EDA
-* `notebooks/` → Python modeling
+* `notebook/` → Python modeling
 * `dashboard/` → Power BI dashboard
+* `outputs/` → Visualizations and figures
 
 ---
 
@@ -152,7 +153,7 @@ Performed EDA using SQL to analyze churn patterns across:
 git clone https://github.com/rk-analytics/customer-churn-prediction.git
 cd customer-churn-prediction
 pip install -r requirements.txt
-jupyter notebook notebooks/churn_modeling.ipynb
+jupyter notebook notebook/churn_modeling.ipynb
 ```
 
 ---
@@ -160,7 +161,7 @@ jupyter notebook notebooks/churn_modeling.ipynb
 ## 🛠 Tools & Technologies
 
 * Excel (initial data validation and cleaning)
-* Python (pandas, numpy, scikit-learn, xgboost)
+* Python 3.10+ (pandas, numpy, scikit-learn, xgboost)
 * SQL (data querying and EDA)
 * Power BI (dashboard)
 
