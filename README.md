@@ -7,6 +7,15 @@ This project aims to identify high-risk customers and uncover key drivers of chu
 
 ---
 
+## 🎯 Objective
+
+* Predict customer churn using machine learning
+* Identify high-risk customer segments
+* Quantify potential revenue at risk
+* Provide actionable retention strategies
+
+---
+
 ## 📁 Dataset
 
 * **Source:** Telco Customer Dataset
@@ -19,8 +28,9 @@ This project aims to identify high-risk customers and uncover key drivers of chu
 
 ### 1. Data Validation & Cleaning
 
-* Checked for missing values and inconsistent categories
-* Validated data types and distributions
+* Checked for missing values (**no significant nulls found**)
+* Validated categorical consistency (**no unexpected labels**)
+* Verified numerical distributions and potential outliers
 * Encoded categorical variables for modeling
 
 ---
@@ -63,13 +73,19 @@ Performed EDA using SQL to analyze churn patterns across:
 * Precision / Recall
 * ROC-AUC
 
+**Model Performance (Final Model):**
+
+* ROC-AUC: ~0.84 *(replace with your actual value)*
+* Recall (Churn class): ~0.78 *(replace with your value)*
+* Precision: ~0.65 *(replace with your value)*
+
 ---
 
 ### 5. Threshold Optimization
 
 * Tuned classification threshold to balance precision and recall
 * Prioritized **higher recall** to maximize churn detection (business-driven decision)
-* Reduced false negatives to better identify potential churners
+* Reduced false negatives to ensure high-risk customers are not missed, improving retention opportunities
 
 ---
 
@@ -81,15 +97,29 @@ Performed EDA using SQL to analyze churn patterns across:
   * High-risk customer segments
 * Enabled filtering by tenure, contract type, and charges
 
+#### 📊 Dashboard Preview
+
+![Customer Churn Dashboard](outputs/figures/dashboard.png)
+
+**Key highlights from dashboard:**
+
+* Churn Rate: **26.54%**
+* Revenue at Risk: **$139K (~30%)**
+* High-risk customers contribute ~30% of total revenue at risk
+
 ---
 
 ## 📈 Key Insights
 
 * Overall churn rate: **~26%**
 
-**High-risk segment:**
+**High-risk segment characteristics:**
 
-* Low tenure + Month-to-month + High charges
+* Low tenure
+
+* Month-to-month contracts
+
+* High monthly charges
 
 * **~65–70% churn probability**
 
@@ -106,9 +136,17 @@ Performed EDA using SQL to analyze churn patterns across:
 
 ---
 
+## 📂 Repository Structure
+
+* `sql/` → SQL-based EDA
+* `notebook/` → Python modeling
+* `dashboard/` → Power BI dashboard
+
+---
+
 ## 🛠 Tools & Technologies
 
-* Excel (data cleaning and preprocessing)
+* Excel (initial data validation)
 * Python (pandas, numpy, scikit-learn, xgboost)
 * SQL (data querying and EDA)
 * Power BI (dashboarding)
