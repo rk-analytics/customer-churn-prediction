@@ -11,7 +11,7 @@ This project aims to identify high-risk customers and uncover key drivers of chu
 
 * Predict customer churn using machine learning
 * Identify high-risk customer segments
-* Quantify potential revenue at risk
+* Quantify revenue at risk
 * Provide actionable retention strategies
 
 ---
@@ -75,23 +75,23 @@ Performed EDA using SQL to analyze churn patterns across:
 
 **Model Performance (Final Model):**
 
-* ROC-AUC: ~0.84 *(replace with your actual value)*
-* Recall (Churn class): ~0.78 *(replace with your value)*
-* Precision: ~0.65 *(replace with your value)*
+* ROC-AUC: ~0.84 *(update with actual value)*
+* Recall (Churn class): ~0.78 *(update with actual value)*
+* Precision: ~0.65 *(update with actual value)*
 
 ---
 
 ### 5. Threshold Optimization
 
 * Tuned classification threshold to balance precision and recall
-* Prioritized **higher recall** to maximize churn detection (business-driven decision)
-* Reduced false negatives to ensure high-risk customers are not missed, improving retention opportunities
+* Prioritized **higher recall** to maximize churn detection
+* Reduced false negatives to ensure high-risk customers are not missed
 
 ---
 
 ### 6. Dashboard & Visualization (Power BI)
 
-* Built interactive dashboard to visualize:
+* Built an interactive dashboard to visualize:
 
   * Churn distribution
   * High-risk customer segments
@@ -101,11 +101,11 @@ Performed EDA using SQL to analyze churn patterns across:
 
 ![Customer Churn Dashboard](outputs/figures/dashboard.png)
 
-**Key highlights from dashboard:**
+**Key highlights:**
 
 * Churn Rate: **26.54%**
 * Revenue at Risk: **$139K (~30%)**
-* High-risk customers contribute ~30% of total revenue at risk
+* High-risk customers contribute disproportionately to revenue loss
 
 ---
 
@@ -125,13 +125,15 @@ Performed EDA using SQL to analyze churn patterns across:
 
 * Long-term contract customers show significantly lower churn
 
+* High-risk customers contribute **~30% of total revenue at risk (~$139K monthly)**
+
 ---
 
 ## 💡 Business Recommendations
 
 * 🎯 Target high-risk customers with retention offers
 * 💰 Encourage long-term contracts through pricing incentives
-* 📞 Improve onboarding & engagement for low-tenure customers (first 3–6 months critical)
+* 📞 Improve onboarding & engagement for low-tenure customers
 * 📦 Bundle value-added services to reduce churn probability
 
 ---
@@ -139,17 +141,28 @@ Performed EDA using SQL to analyze churn patterns across:
 ## 📂 Repository Structure
 
 * `sql/` → SQL-based EDA
-* `notebook/` → Python modeling
+* `notebooks/` → Python modeling
 * `dashboard/` → Power BI dashboard
+
+---
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/rk-analytics/customer-churn-prediction.git
+cd customer-churn-prediction
+pip install -r requirements.txt
+jupyter notebook notebooks/churn_modeling.ipynb
+```
 
 ---
 
 ## 🛠 Tools & Technologies
 
-* Excel (initial data validation)
+* Excel (initial data validation and cleaning)
 * Python (pandas, numpy, scikit-learn, xgboost)
 * SQL (data querying and EDA)
-* Power BI (dashboarding)
+* Power BI (dashboard)
 
 ---
 
