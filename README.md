@@ -24,6 +24,12 @@ This project focuses on identifying high-risk customers and uncovering key drive
 
 **Location:**  
 - `data//_customer_churn_dataset.csv`
+
+**Data Quality:**
+- No missing values  
+- Clean categorical encoding  
+- Consistent schema ready for analysis
+
 ---
 
 ## ⚙️ Approach
@@ -75,7 +81,7 @@ Performed EDA using SQL to analyze churn patterns across:
 * Precision / Recall
 * ROC-AUC
 
-**Final Model:** Logistic Regression with threshold = **0.25**
+**Final Model Selection:** Logistic Regression with threshold = **0.25**
 
 **Model Performance:**
 
