@@ -20,41 +20,58 @@ This project aims to identify high-risk customers and uncover key drivers of chu
 ### 1. Data Validation & Cleaning
 
 * Checked for missing values and inconsistent categories
-* Converted categorical variables using encoding techniques
-* Verified data types and distributions
+* Validated data types and distributions
+* Encoded categorical variables for modeling
 
-### 2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis (SQL)
 
-Key patterns identified:
+* Performed EDA using SQL to identify churn patterns across:
 
-* Customers with **month-to-month contracts** show significantly higher churn
-* **Low tenure + high monthly charges** segment has the highest churn risk
-* Customers without **value-added services (Tech Support, Online Security)** are more likely to churn
+  * Contract types
+  * Tenure groups
+  * Monthly charges
 
-### 3. Feature Engineering
+**Key Findings:**
 
-* Tenure segmentation (low / medium / high)
-* Contract type grouping
-* Derived risk-based customer segments
+* Customers with **month-to-month contracts** have significantly higher churn
+* **Low tenure + high monthly charges** segment shows highest churn risk
+* Lack of **value-added services (Tech Support, Online Security)** increases churn probability
 
-### 4. Modeling
 
-Models used:
+### 3. Feature Engineering (Python)
+
+* Created tenure-based segments (low / medium / high)
+* Grouped contract types
+* Derived risk-oriented features for modeling
+
+### 4. Predictive Modeling (Python)
+
+Models implemented:
 
 * Logistic Regression (baseline)
 * Random Forest
 * XGBoost
 
-Evaluation Metrics:
+Evaluation metrics:
 
 * Accuracy
 * Precision / Recall
 * ROC-AUC
 
+
 ### 5. Threshold Optimization
 
-* Adjusted classification threshold to balance recall vs precision
-* Focused on **maximizing churn detection (business priority)**
+* Tuned classification threshold to balance precision and recall
+* Prioritized **higher recall** to maximize churn detection (business-driven decision)
+
+
+### 6. Dashboard & Visualization (Power BI)
+
+* Built interactive dashboard to visualize:
+
+  * Churn distribution
+  * High-risk customer segments
+* Enabled filtering by tenure, contract type, and charges for business use
 
 ---
 
