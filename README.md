@@ -22,6 +22,8 @@ This project focuses on identifying high-risk customers and uncovering key drive
 * **Records:** ~7,043 customers
 * **Features:** Demographics, account details, services, billing
 
+**Location:**  
+- `data//_customer_churn_dataset.csv`
 ---
 
 ## ⚙️ Approach
@@ -152,6 +154,7 @@ Performed EDA using SQL to analyze churn patterns across:
 * `sql/` → SQL-based EDA
 * `notebook/` → Python modeling
 * `dashboard/` → Power BI dashboard
+* `data/` → Dataset
 * `outputs/` → Visualizations and figures
 
 ---
