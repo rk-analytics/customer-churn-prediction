@@ -23,7 +23,7 @@ This project focuses on identifying high-risk customers and uncovering key drive
 * **Features:** Demographics, account details, services, billing
 
 **Location:**  
-- `data//_customer_churn_dataset.csv`
+- `data/customer_churn_dataset.csv`
 
 **Data Quality:**
 - No missing values  
